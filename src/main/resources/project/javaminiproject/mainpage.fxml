@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
    <children>
       <VBox prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #232629;">
          <children>
@@ -52,7 +51,7 @@
                   <Insets left="70.0" top="100.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #232629;" text="Log out" textFill="#1e7dbc">
+            <Button mnemonicParsing="false" onAction="#SwitchTologinpage" style="-fx-background-color: #232629;" text="Log out" textFill="#1e7dbc">
                <VBox.margin>
                   <Insets left="80.0" top="30.0" />
                </VBox.margin>
