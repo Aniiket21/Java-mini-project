@@ -58,7 +58,6 @@ public class MainController {
 
     //EventPage control functions
     public void switchToMainPage(ActionEvent event) throws IOException {
-
     }
 
 
