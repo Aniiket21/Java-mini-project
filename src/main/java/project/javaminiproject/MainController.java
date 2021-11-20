@@ -3,17 +3,19 @@ package project.javaminiproject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class MainController {
     private Stage stage;
     private Scene scene;
-    private FXMLLoader fxmlLoader;
+    private Parent root;
 
 
     //login control functions
@@ -44,10 +46,8 @@ public class MainController {
     }
     @FXML
     public void SwitchTologinpage(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("login.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        Stage stage=new Stage();
-        stage.setTitle("login page");
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
     }
