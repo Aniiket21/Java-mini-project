@@ -12,8 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Objects;
-
+import java.sql.Connection;
+import java.sql.ResultSet;
 public class MainController {
     private Stage stage;
     private Scene scene;
@@ -58,7 +61,7 @@ public class MainController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+//login database connection
 @FXML
 private Button Login;
     @FXML
@@ -70,6 +73,34 @@ private Button Login;
     @FXML
     private TextField passwordtextfield;
 
+
+
+    public void LoginOnAction(ActionEvent event){
+        if (usernametextfield.getText().isBlank()==false && passwordtextfield.getText().isBlank()==false){
+            Login.setText("Try to login");
+            validateLogin();
+        }
+        else{Login.setText("Enter your Username and Password");}
+    }
+     public void validateLogin(){
+        Databaseconnection  connection =new Databaseconnection();
+         Connection connectDB = connectNow.getConnection;
+
+        String verifylogin ="SELECT count(1) FROM Registration_details WHERE username='"+usernametextfield.getText()+"'AND password='"+passwordtextfield.getText()+"'";
+        try{
+            Statement statement=connectDB.createStatement();
+            ResultSet queryResult =statement.executeQuery(verifylogin);
+            while (queryResult.next()){
+               if(queryResult.getInt(1)==1){
+                   Login.setText("Welcome");
+               }else {
+                   Login.setText("Incorrect credentials please try again");
+               }
+            }
+        } catch (Exception event){
+            event.printStackTrace();
+        }
+     }
 
 
     //EventPage control functions
