@@ -43,8 +43,14 @@ public class MainController {
 
 
 
+    //forgot page control functions
+    public void switchToforgotpage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("forgotuserpass.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
-
+    }
     //main page control functions
     public void switchToEventPage(ActionEvent event) throws IOException {
 
