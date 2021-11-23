@@ -9,9 +9,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
     <children>
-        <Label layoutX="289.0" layoutY="59.0" prefHeight="33.0" prefWidth="202.0" text="Registration page">
+        <Label layoutX="284.0" layoutY="39.0" prefHeight="40.0" prefWidth="233.0" text="Registration page">
             <font>
-                <Font size="23.0" />
+                <Font size="28.0" />
             </font>
         </Label>
         <Label layoutX="229.0" layoutY="108.0" prefHeight="30.0" prefWidth="202.0" text="Name">
@@ -44,7 +44,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="141.0" text="Register">
+        <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" onAction="#SwitchTologinpage" prefHeight="34.0" prefWidth="141.0" text="Register">
             <font>
                 <Font size="28.0" />
             </font>

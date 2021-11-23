@@ -18,7 +18,7 @@
                   <Font name="Symbol" size="36.0" />
                </font>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER" wrappingWidth="180.3348388671875">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="       Categories" textAlignment="CENTER" wrappingWidth="180.3348388671875">
                <font>
                   <Font size="21.0" />
                </font>

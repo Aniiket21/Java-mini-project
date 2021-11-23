@@ -28,18 +28,19 @@
         </Label>
         <TextField fx:id="username" layoutX="459.0" layoutY="160.0" promptText="Enter your username" />
         <TextField layoutX="53.0" layoutY="-110.0" promptText="Enter your password" />
-        <Button id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" text="Login">
+
+        <Button id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" onAction="#switchToMainPage" text="Login">
             <font>
                 <Font size="25.0" />
             </font>
         </Button>
-        <Hyperlink id="Forgot password" layoutX="244.0" layoutY="412.0" text="Forgotten your username or password?">
+        <Hyperlink id="Forgot password" layoutX="244.0" layoutY="412.0" onAction="#switchToforgotpage" text="Forgotten your username or password?">
             <font>
                 <Font size="14.0" />
             </font>
         </Hyperlink>
         <PasswordField layoutX="459.0" layoutY="222.0" promptText="Enter your password over here" />
-      <Button layoutX="310.0" layoutY="347.0" mnemonicParsing="false" text="Register">
+      <Button layoutX="310.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchToRegister" text="Register">
          <font>
             <Font size="25.0" />
          </font>

@@ -21,8 +21,13 @@ public class MainController {
     //login control functions
     public void switchToMainApp(ActionEvent event) throws IOException {
 
+
     }
     public void switchToRegister(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("register.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
     }
 
@@ -38,8 +43,14 @@ public class MainController {
 
 
 
+    //forgot page control functions
+    public void switchToforgotpage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("forgotuserpass.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
-
+    }
     //main page control functions
     public void switchToEventPage(ActionEvent event) throws IOException {
 
@@ -58,6 +69,11 @@ public class MainController {
 
     //EventPage control functions
     public void switchToMainPage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainpage.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+
     }
 
 

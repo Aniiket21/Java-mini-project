@@ -13,12 +13,12 @@
    <children>
       <VBox prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #232629;">
          <children>
-            <Label prefHeight="59.0" prefWidth="228.0" style="-fx-background-color: #25E6CA;" text="    Menu" textFill="#f46262">
+            <Label prefHeight="59.0" prefWidth="228.0" style="-fx-background-color: #25E6CA;" text="      Menu" textFill="#f46262">
                <font>
                   <Font name="Symbol" size="36.0" />
                </font>
             </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER" wrappingWidth="180.3348388671875">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="       Categories" textAlignment="CENTER" wrappingWidth="180.3348388671875">
                <font>
                   <Font size="21.0" />
                </font>
