@@ -87,7 +87,7 @@ public class MainController {
 
 
 
-    public void LoginOnAction(ActionEvent event)throws IOException{
+  /*  public void LoginOnAction(ActionEvent event)throws IOException{
         Login.setText("Invalid Login!");
         if (usernametextfield.getText().isBlank()==false && passwordtextfield.getText().isBlank()==false){
             Login.setText("Try to login");
@@ -95,7 +95,7 @@ public class MainController {
         }
         else{Login.setText("Enter your Username and Password");}
     }
-
+*/
     public void cancelButtonOnAction(ActionEvent event){
         Stage stage = (Stage)cancel.getScene().getWindow();
         stage.close();
