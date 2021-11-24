@@ -33,7 +33,7 @@ public class MainController {
 
 
     }
-    public void switchToRegister(ActionEvent event) throws IOException {
+    public void SwitchToRegister(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("register.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -87,22 +87,24 @@ public class MainController {
 
 
 
-  /*  public void LoginOnAction(ActionEvent event)throws IOException{
-        Login.setText("Invalid Login!");
-        if (usernametextfield.getText().isBlank()==false && passwordtextfield.getText().isBlank()==false){
+    public void LoginOnAction(ActionEvent event)throws IOException{
+        //Login.setText("Invalid Login!");
+        if (!usernametextfield.getText().isBlank() && !passwordtextfield.getText().isBlank()){
             Login.setText("Try to login");
-            validateLogin();
+            if (validateLogin()){
+                SwitchToMainPage(event);
+            }
         }
         else{Login.setText("Enter your Username and Password");}
     }
-*/
+
     public void cancelButtonOnAction(ActionEvent event){
         Stage stage = (Stage)cancel.getScene().getWindow();
         stage.close();
 
     }
 
-    public void validateLogin()throws IOException{
+    public boolean validateLogin()throws IOException{
         DatabaseConnection  connection =new DatabaseConnection();
         Connection connectDB = connection.getConnected();
 
@@ -112,20 +114,23 @@ public class MainController {
             ResultSet queryResult =statement.executeQuery(verifylogin);
             while (queryResult.next()){
                 if(queryResult.getInt(1)==1){
-                    Login.setText("Welcome");
+                    //Login.setText("Welcome");
+                    return true;
                 }else {
-                    Login.setText("Enter valid Username or password");
+                    //Login.setText("Enter valid Username or password");
+                    return false;
                 }
             }
         } catch (Exception event){
             event.printStackTrace();
         }
+        return false;
     }
 
 
 
     //EventPage control functions
-    public void switchToMainPage(ActionEvent event) throws IOException {
+    public void SwitchToMainPage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainpage.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));

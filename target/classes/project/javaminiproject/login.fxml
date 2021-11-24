@@ -24,7 +24,7 @@
         </Label>
         <TextField fx:id="usernametextfield" layoutX="459.0" layoutY="160.0" promptText="Enter your username" />
         <TextField layoutX="53.0" layoutY="-110.0" promptText="Enter your password" />
-        <Button id="Login" fx:id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" onAction="#validateLogin" onKeyPressed="#switchToMainPage" text="Login">
+        <Button id="Login" fx:id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" onAction="#validateLogin" onKeyPressed="#LoginOnAction" text="Login">
             <font>
                 <Font size="25.0" />
             </font>
@@ -35,7 +35,7 @@
             </font>
         </Hyperlink>
         <PasswordField fx:id="passwordtextfield" layoutX="459.0" layoutY="222.0" promptText="Enter your password over here" />
-      <Button layoutX="310.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchToRegister" text="Register">
+      <Button layoutX="310.0" layoutY="347.0" mnemonicParsing="false" onAction="#SwitchToRegister" text="Register">
          <font>
             <Font size="25.0" />
          </font>
