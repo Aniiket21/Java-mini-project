@@ -39,22 +39,16 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Label layoutX="225.0" layoutY="425.0" prefHeight="30.0" prefWidth="202.0" text="Confirm Password">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
-        <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" onAction="#SwitchTologinpage" prefHeight="34.0" prefWidth="141.0" text="Register">
+        <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" onAction="#registerdetails" prefHeight="34.0" prefWidth="141.0" text="Register">
             <font>
                 <Font size="28.0" />
             </font>
         </Button>
-        <TextField layoutX="426.0" layoutY="111.0" promptText="First Name" />
-        <TextField layoutX="426.0" layoutY="148.0" promptText="Last name" />
-        <TextField layoutX="426.0" layoutY="199.0" promptText="Enter your phone number" />
-        <TextField layoutX="426.0" layoutY="258.0" promptText="Enter your email id" />
-        <TextField layoutX="426.0" layoutY="317.0" promptText="Create a username" />
-        <PasswordField layoutX="426.0" layoutY="371.0" promptText="Create a password" />
-        <PasswordField layoutX="426.0" layoutY="428.0" promptText="Confirm your password" />
+        <TextField fx:id="fName" layoutX="426.0" layoutY="111.0" promptText="First Name" />
+        <TextField fx:id="lName" layoutX="426.0" layoutY="148.0" promptText="Last name" />
+        <TextField fx:id="num" layoutX="426.0" layoutY="199.0" promptText="Enter your phone number" />
+        <TextField fx:id="email" layoutX="426.0" layoutY="258.0" promptText="Enter your email id" />
+        <TextField fx:id="usernametextfield" layoutX="426.0" layoutY="317.0" promptText="Create a username" />
+        <PasswordField fx:id="passwordtextfield" layoutX="426.0" layoutY="371.0" promptText="Create a password" />
     </children>
 </Pane>

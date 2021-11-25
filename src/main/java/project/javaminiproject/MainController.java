@@ -75,15 +75,11 @@ public class MainController {
     @FXML
     private Button Login;
     @FXML
-    private Label username;
-    @FXML
-    private Label password;
-    @FXML
     private TextField usernametextfield;
     @FXML
     private PasswordField passwordtextfield;
     @FXML
-    private Button cancel;
+    private TextField cancel;
 
 
 
@@ -126,12 +122,34 @@ public class MainController {
         }
         return false;
     }
-
+    @FXML
+    private TextField fName;
+    @FXML
+    private TextField lName;
+    @FXML
+    private TextField num;
+    @FXML
+    private TextField email;
+    public void registerdetails(ActionEvent e) {
+        DatabaseConnection connection = new DatabaseConnection();
+        Connection connectDB= connection.getConnected();
+        String rdetails="INSERT INTO Registration_details(Firstname,Lastname,Phonenumber,Emailid,Username,Password) VALUES ('"+fName.getText()+"','"+lName.getText()+"','"+num.getText()+"','"+email.getText()+"','"+usernametextfield.getText()+"','"+passwordtextfield.getText()+"')";
+        if(!fName.getText().isEmpty()&&!lName.getText().isEmpty()&&!num.getText().isEmpty()&&!usernametextfield.getText().isEmpty()&&!passwordtextfield.getText().isEmpty()){
+        try{
+            Statement statement=connectDB.createStatement();
+            int a = statement.executeUpdate(rdetails);
+            if (a==1)
+                SwitchTologinpage(e);
+        } catch (Exception event){
+            event.printStackTrace();
+        }
+        }
+    }
 
 
     //EventPage control functions
     public void SwitchToMainPage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainpage.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tempMain.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

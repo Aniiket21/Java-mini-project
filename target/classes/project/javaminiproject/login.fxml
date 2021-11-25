@@ -24,7 +24,7 @@
         </Label>
         <TextField fx:id="usernametextfield" layoutX="459.0" layoutY="160.0" promptText="Enter your username" />
         <TextField layoutX="53.0" layoutY="-110.0" promptText="Enter your password" />
-        <Button id="Login" fx:id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" onAction="#validateLogin" onKeyPressed="#LoginOnAction" text="Login">
+        <Button id="Login" fx:id="Login" layoutX="322.0" layoutY="273.0" mnemonicParsing="false" onAction="#LoginOnAction" text="Login">
             <font>
                 <Font size="25.0" />
             </font>
