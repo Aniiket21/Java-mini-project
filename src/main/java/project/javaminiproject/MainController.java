@@ -130,6 +130,8 @@ public class MainController {
     private TextField num;
     @FXML
     private TextField email;
+    @FXML
+    private Label error;
     public void registerdetails(ActionEvent e) {
         DatabaseConnection connection = new DatabaseConnection();
         Connection connectDB= connection.getConnected();
@@ -143,6 +145,9 @@ public class MainController {
         } catch (Exception event){
             event.printStackTrace();
         }
+        }
+        else {
+            error.setText("Error");
         }
     }
 

@@ -50,5 +50,10 @@
         <TextField fx:id="email" layoutX="426.0" layoutY="258.0" promptText="Enter your email id" />
         <TextField fx:id="usernametextfield" layoutX="426.0" layoutY="317.0" promptText="Create a username" />
         <PasswordField fx:id="passwordtextfield" layoutX="426.0" layoutY="371.0" promptText="Create a password" />
+      <Label fx:id="error" layoutX="363.0" layoutY="431.0" prefHeight="30.0" prefWidth="76.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
