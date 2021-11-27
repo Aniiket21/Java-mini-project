@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.PasswordField;
 
@@ -21,12 +22,11 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.Statement;
 
-
 public class MainController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
+    public int a=1;
 
     //login control functions
     public void switchToMainApp(ActionEvent event) throws IOException {
@@ -45,11 +45,6 @@ public class MainController {
 
 
 
-    //register control functions
-
-
-
-
     //forgot page control functions
     public void switchToforgotpage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("forgotuserpass.fxml")));
@@ -59,8 +54,59 @@ public class MainController {
 
     }
     //main page control functions
-    public void switchToEventPage(ActionEvent event) throws IOException {
-
+    @FXML
+    private Text eName;
+    @FXML
+    private Label eDetails;
+    @FXML
+    private Label eTime;
+    @FXML
+    private Label eDate;
+    @FXML
+    private Label eLink;
+    public void initial(ActionEvent event)throws IOException{
+        DatabaseConnection  connection =new DatabaseConnection();
+        Connection connectDB = connection.getConnected();
+        String getename="SELECT * FROM Event_Details where eId="+a;
+        try{
+            Statement statement=connectDB.createStatement();
+            ResultSet resultSet =statement.executeQuery(getename);
+            while (resultSet.next()){
+                eName.setText(resultSet.getString("EventName"));
+                eDetails.setText(resultSet.getString("EventDetails"));
+                eDate.setText(resultSet.getString("EventDate"));
+                eTime.setText(resultSet.getString("EventTime"));
+                eLink.setText(resultSet.getString("EventLink"));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public boolean nextAvailable(){
+        DatabaseConnection  connection =new DatabaseConnection();
+        Connection connectDB = connection.getConnected();
+        try {
+            Statement s=connectDB.createStatement();
+            ResultSet r=s.executeQuery("SELECT max(eId) FROM Event_Details");
+            while (r.next()){
+                return a < r.getInt(1);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public void next(ActionEvent event) throws IOException {
+        if (nextAvailable()){
+            a++;
+            initial(event);
+        }
+    }
+    public void prev(ActionEvent event) throws IOException {
+        if (a>1){
+            a--;
+            initial(event);
+        }
     }
     @FXML
     public void SwitchTologinpage(ActionEvent event) throws IOException {
@@ -154,7 +200,7 @@ public class MainController {
 
     //EventPage control functions
     public void SwitchToMainPage(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tempMain.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainpage.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

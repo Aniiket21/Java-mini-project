@@ -13,7 +13,7 @@
    <children>
       <VBox prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #232629;">
          <children>
-            <Label prefHeight="59.0" prefWidth="228.0" style="-fx-background-color: #25E6CA;" text="    Menu" textFill="#f46262">
+            <Label prefHeight="59.0" prefWidth="228.0" style="-fx-background-color: #25E6CA;" text="      Menu" textFill="#f46262">
                <font>
                   <Font name="Symbol" size="36.0" />
                </font>
@@ -26,26 +26,6 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Text>
-            <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Sports">
-               <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Math">
-               <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Coding">
-               <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Exclusive">
-               <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
-               </VBox.margin>
-            </Button>
             <Button mnemonicParsing="false" text="Add Events">
                <VBox.margin>
                   <Insets left="70.0" top="100.0" />
@@ -56,8 +36,27 @@
                   <Insets left="80.0" top="30.0" />
                </VBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#initial" text="Refresh">
+               <VBox.margin>
+                  <Insets left="80.0" top="40.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
       <ScrollBar layoutX="798.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
+      <Label layoutX="268.0" layoutY="136.0" prefHeight="28.0" prefWidth="38.0" text="Time:" />
+      <Label fx:id="eTime" layoutX="331.0" layoutY="142.0" prefHeight="18.0" prefWidth="297.0" text="Label" />
+      <Label layoutX="268.0" layoutY="216.0" prefHeight="28.0" prefWidth="38.0" text="Details:" />
+      <Label fx:id="eDetails" layoutX="331.0" layoutY="189.0" prefHeight="81.0" prefWidth="298.0" text="Label" />
+      <Button layoutX="242.0" layoutY="486.0" mnemonicParsing="false" onAction="#prev" text="Prev" />
+      <Button layoutX="699.0" layoutY="486.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Label layoutX="268.0" layoutY="273.0" prefHeight="28.0" prefWidth="38.0" text="Date:" />
+      <Label fx:id="eDate" layoutX="331.0" layoutY="278.0" text="Label" />
+      <Label layoutX="268.0" layoutY="333.0" prefHeight="28.0" prefWidth="38.0" text="Link:" />
+      <Label fx:id="eLink" layoutX="331.0" layoutY="338.0" prefHeight="18.0" prefWidth="370.0" text="Label" />
+      <Text fx:id="eName" layoutX="254.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.9366455078125">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
    </children>
 </AnchorPane>
