@@ -234,7 +234,7 @@ public class MainController {
     public void createEvent(ActionEvent e){
         DatabaseConnection connection = new DatabaseConnection();
         Connection connectDB= connection.getConnected();
-        String createvent="INSERT INTO Event_Details(EventName,EventCategory,EventLink,EventDetails,EventDate,EventTime,eID) VALUES ('"+Eventname.getText()+"','"+EventCatergory.getText()+"','"+EventLink.getText()+"','"+EventDetails.getText()+"','"+EventDate.getText()+"','"+EventTime.getText()+"')";
+        String createvent="INSERT INTO Event_Details(EventName,EventCategory,EventLink,EventDetails,EventDate,EventTime) VALUES ('"+Eventname.getText()+"','"+EventCatergory.getText()+"','"+EventLink.getText()+"','"+EventDetails.getText()+"','"+EventDate.getText()+"','"+EventTime.getText()+"')";
         if (!Eventname.getText().isEmpty()&&!EventCatergory.getText().isEmpty()&&!EventLink.getText().isEmpty()&&!EventDetails.getText().isEmpty()&&!EventDate.getText().isEmpty()&&!EventTime.getText().isEmpty())
         {
             try{
