@@ -26,7 +26,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Text>
-            <Button mnemonicParsing="false" text="Add Events">
+            <Button mnemonicParsing="false" onAction="#SwitchToCreateEventPage" text="Add Events">
                <VBox.margin>
                   <Insets left="70.0" top="100.0" />
                </VBox.margin>
