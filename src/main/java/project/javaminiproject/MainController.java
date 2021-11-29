@@ -13,10 +13,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.PasswordField;
 
+
 import java.io.IOException;
 import java.util.Objects;
 import java.sql.*;
- //Registration
 import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
@@ -207,7 +207,49 @@ public class MainController {
 
     }
 
+    //CreateEvent control functions
+    public void SwitchToCreateEventPage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("createevent.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
 
+    }
+
+    @FXML
+    private TextField Eventname;
+    @FXML
+    private TextField EventCatergory;
+    @FXML
+    private TextField EventLink;
+    @FXML
+    private TextField EventDetails;
+    @FXML
+    private TextField EventDate;
+    @FXML
+    private TextField EventTime;
+    @FXML
+    private Label Incomplete;
+
+    public void createEvent(ActionEvent e){
+        DatabaseConnection connection = new DatabaseConnection();
+        Connection connectDB= connection.getConnected();
+        String createvent="INSERT INTO Event_Details(EventName,EventCategory,EventLink,EventDetails,EventDate,EventTime) VALUES ('"+Eventname.getText()+"','"+EventCatergory.getText()+"','"+EventLink.getText()+"','"+EventDetails.getText()+"','"+EventDate.getText()+"','"+EventTime.getText()+"')";
+        if (!Eventname.getText().isEmpty()&&!EventCatergory.getText().isEmpty()&&!EventLink.getText().isEmpty()&&!EventDetails.getText().isEmpty()&&!EventDate.getText().isEmpty()&&!EventTime.getText().isEmpty())
+        {
+            try{
+                Statement statement=connectDB.createStatement();
+                int a = statement.executeUpdate(createvent);
+                if (a==1)
+                    SwitchToMainPage(e);
+            } catch (Exception event) {
+                event.printStackTrace();
+            }
+        }
+        else {
+            Incomplete.setText("Error");
+        }
+    }
 
 
 //    @FXML
