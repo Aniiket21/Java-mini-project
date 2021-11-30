@@ -57,5 +57,10 @@
             <Image url="@pic1.jpeg" />
          </image>
       </ImageView>
+      <Button layoutX="32.0" layoutY="18.0" mnemonicParsing="false" onAction="#SwitchTologinpage" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #79137c;" text="Go back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
     </children>
 </Pane>

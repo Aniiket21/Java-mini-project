@@ -12,7 +12,7 @@ import java.util.Objects;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginn.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         Scene scene = new Scene(root);
         stage.setTitle("Event Management");
         stage.setScene(scene);

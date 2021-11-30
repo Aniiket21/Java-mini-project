@@ -163,6 +163,29 @@ public class MainController {
         }
         return false;
     }
+    @FXML
+    private TextField Email;
+    @FXML
+    private Label user;
+    @FXML
+    private Label pass;
+    public void forgor(ActionEvent e)throws IOException{
+        user.setText("Username : Try again");
+        pass.setText("Password : Try again");
+        DatabaseConnection connection = new DatabaseConnection();
+        Connection connectDB = connection.getConnected();
+        String f="select username, password from Registration_details where Emailid='"+Email.getText()+"'";
+        try {
+            Statement s=connectDB.createStatement();
+            ResultSet r=s.executeQuery(f);
+            while (r.next()){
+                user.setText("Username : "+r.getString(1));
+                pass.setText("Password : "+r.getString(2));
+            }
+        } catch (Exception event) {
+            event.printStackTrace();
+        }
+    }
     //register
     @FXML
     private TextField fName;
