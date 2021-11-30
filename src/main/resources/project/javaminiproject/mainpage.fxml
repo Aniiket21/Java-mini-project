@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
    <children>
       <VBox prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #232629;">
          <children>
@@ -40,49 +44,19 @@
          </children>
       </VBox>
       <ScrollBar layoutX="798.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
-      <Label layoutX="268.0" layoutY="136.0" prefHeight="28.0" prefWidth="50.0" text="Time:" textFill="#b51a1a">
+      <Label layoutX="268.0" layoutY="136.0" prefHeight="28.0" prefWidth="38.0" text="Time:" />
+      <Label fx:id="eTime" layoutX="331.0" layoutY="142.0" prefHeight="18.0" prefWidth="297.0" text="Label" />
+      <Label layoutX="268.0" layoutY="216.0" prefHeight="28.0" prefWidth="38.0" text="Details:" />
+      <Label fx:id="eDetails" layoutX="331.0" layoutY="189.0" prefHeight="81.0" prefWidth="298.0" text="Label" />
+      <Button layoutX="242.0" layoutY="486.0" mnemonicParsing="false" onAction="#prev" text="Prev" />
+      <Button layoutX="699.0" layoutY="486.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Label layoutX="268.0" layoutY="273.0" prefHeight="28.0" prefWidth="38.0" text="Date:" />
+      <Label fx:id="eDate" layoutX="331.0" layoutY="278.0" text="Label" />
+      <Label layoutX="268.0" layoutY="333.0" prefHeight="28.0" prefWidth="38.0" text="Link:" />
+      <Label fx:id="eLink" layoutX="331.0" layoutY="338.0" prefHeight="18.0" prefWidth="370.0" text="Label" />
+      <Text fx:id="eName" layoutX="254.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.9366455078125">
          <font>
-            <Font name="Cambria" size="16.0" />
-         </font></Label>
-      <Label fx:id="eTime" layoutX="335.0" layoutY="138.0" prefHeight="18.0" prefWidth="297.0" text="Label" textFill="#b51a1a">
-         <font>
-            <Font size="16.0" />
-         </font></Label>
-      <Label layoutX="268.0" layoutY="272.0" prefHeight="28.0" prefWidth="57.0" text="Details:" textFill="#142ad0">
-         <font>
-            <Font size="16.0" />
-         </font></Label>
-      <Label fx:id="eDetails" layoutX="338.0" layoutY="238.0" prefHeight="97.0" prefWidth="460.0" text="Label" textFill="#142ad0">
-         <font>
-            <Font name="Cambria" size="16.0" />
-         </font></Label>
-      <Button layoutX="254.0" layoutY="486.0" mnemonicParsing="false" onAction="#prev" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: #142ad0;" text="Prev" textFill="#fff600">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font></Button>
-      <Button layoutX="664.0" layoutY="486.0" mnemonicParsing="false" onAction="#next" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: #142ad0;" text="Next" textFill="#fff205">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font></Button>
-      <Label layoutX="268.0" layoutY="202.0" prefHeight="28.0" prefWidth="50.0" text="Date:" textFill="#bf1818">
-         <font>
-            <Font name="Cambria" size="16.0" />
-         </font></Label>
-      <Label fx:id="eDate" layoutX="335.0" layoutY="204.0" prefHeight="25.0" prefWidth="125.0" text="Label" textFill="#ab1515">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font></Label>
-      <Label layoutX="274.0" layoutY="362.0" prefHeight="28.0" prefWidth="41.0" text="Link:" textFill="#142ad0">
-         <font>
-            <Font size="16.0" />
-         </font></Label>
-      <Label fx:id="eLink" layoutX="336.0" layoutY="362.0" prefHeight="28.0" prefWidth="434.0" text="Label" textFill="#142ad0">
-         <font>
-            <Font size="16.0" />
-         </font></Label>
-      <Text fx:id="eName" fill="#142ad0" layoutX="254.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.9366455078125">
-         <font>
-            <Font name="Cambria Bold" size="41.0" />
+            <Font size="22.0" />
          </font></Text>
    </children>
 </AnchorPane>
