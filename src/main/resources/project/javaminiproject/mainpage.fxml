@@ -2,12 +2,10 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e1e0d5;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
    <children>
       <VBox prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #232629;">
          <children>
@@ -41,55 +39,24 @@
             </Button>
          </children>
       </VBox>
-      <Label layoutX="268.0" layoutY="136.0" prefHeight="28.0" prefWidth="50.0" text="Time:">
+      <ScrollBar layoutX="798.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
+      <Label layoutX="268.0" layoutY="136.0" prefHeight="28.0" prefWidth="50.0" text="Time:" textFill="#b51a1a">
          <font>
             <Font name="Cambria" size="16.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="0.5" endY="0.7857142857142858" startX="0.4142857142857143" startY="0.22380952380952382">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.08040935546159744" green="0.1854775846004486" blue="0.8684210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.699999988079071" green="0.10499999672174454" blue="0.10499999672174454" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill></Label>
+         </font></Label>
       <Label fx:id="eTime" layoutX="335.0" layoutY="138.0" prefHeight="18.0" prefWidth="297.0" text="Label" textFill="#b51a1a">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Label layoutX="268.0" layoutY="272.0" prefHeight="28.0" prefWidth="57.0" text="Details:">
+      <Label layoutX="268.0" layoutY="272.0" prefHeight="28.0" prefWidth="57.0" text="Details:" textFill="#142ad0">
          <font>
             <Font size="16.0" />
-         </font>
-         <textFill>
-            <RadialGradient centerX="0.40555555555555556" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.08040935546159744" green="0.1854775846004486" blue="0.8684210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.08910000324249268" green="0.5600874423980713" blue="0.8100000023841858" opacity="0.8999999761581421" />
-                     </color>
-                  </Stop>
-               </stops>
-            </RadialGradient>
-         </textFill></Label>
-      <Label fx:id="eDetails" layoutX="338.0" layoutY="238.0" prefHeight="97.0" prefWidth="460.0" text="Label" textFill="#152dcf">
+         </font></Label>
+      <Label fx:id="eDetails" layoutX="338.0" layoutY="238.0" prefHeight="97.0" prefWidth="460.0" text="Label" textFill="#142ad0">
          <font>
             <Font name="Cambria" size="16.0" />
          </font></Label>
-      <Button layoutX="254.0" layoutY="486.0" mnemonicParsing="false" onAction="#prev" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: #142ad0;" text="Prev" textFill="#d8db18">
+      <Button layoutX="254.0" layoutY="486.0" mnemonicParsing="false" onAction="#prev" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: #142ad0;" text="Prev" textFill="#fff600">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
@@ -105,53 +72,17 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
-      <Label layoutX="274.0" layoutY="362.0" prefHeight="28.0" prefWidth="41.0" text="Link:">
+      <Label layoutX="274.0" layoutY="362.0" prefHeight="28.0" prefWidth="41.0" text="Link:" textFill="#142ad0">
          <font>
             <Font size="16.0" />
-         </font>
-         <textFill>
-            <RadialGradient centerX="0.45000000000000007" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.08040935546159744" green="0.1854775846004486" blue="0.8684210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.08100000023841858" green="0.5610738396644592" blue="0.8100000023841858" />
-                     </color>
-                  </Stop>
-               </stops>
-            </RadialGradient>
-         </textFill></Label>
+         </font></Label>
       <Label fx:id="eLink" layoutX="336.0" layoutY="362.0" prefHeight="28.0" prefWidth="434.0" text="Label" textFill="#142ad0">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Text fx:id="eName" layoutX="254.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.9366455078125">
+      <Text fx:id="eName" fill="#142ad0" layoutX="254.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="390.9366455078125">
          <font>
             <Font name="Cambria Bold" size="41.0" />
-         </font>
-         <fill>
-            <RadialGradient centerX="0.4722222222222222" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.08040935546159744" green="0.1854775846004486" blue="0.8684210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.08235294371843338" green="0.5607843399047852" blue="0.8117647171020508" />
-                     </color>
-                  </Stop>
-               </stops>
-            </RadialGradient>
-         </fill></Text>
-      <ImageView fitHeight="59.0" fitWidth="41.0" layoutX="220.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Image/pngegg.png" />
-         </image></ImageView>
+         </font></Text>
    </children>
 </AnchorPane>
