@@ -136,12 +136,12 @@ public class MainController {
     public void LoginOnAction(ActionEvent event) throws IOException {
         //Login.setText("Invalid Login!");
         if (!usernametextfield.getText().isBlank() && !passwordtextfield.getText().isBlank()) {
-            Login.setText("Try to login");
+            error.setText("Try again");
             if (validateLogin()) {
                 SwitchToMainPage(event);
             }
         } else {
-            Login.setText("Enter your Username and Password");
+            error.setText("Enter your Username and Password");
         }
     }
 
@@ -163,7 +163,6 @@ public class MainController {
         }
         return false;
     }
-
     //register
     @FXML
     private TextField fName;
