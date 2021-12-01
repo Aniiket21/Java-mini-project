@@ -4,56 +4,58 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaminiproject.MainController">
     <children>
-        <Label layoutX="284.0" layoutY="39.0" prefHeight="40.0" prefWidth="233.0" text="Registration page">
+        <Label layoutX="409.0" layoutY="116.0" prefHeight="30.0" prefWidth="59.0" text="Name">
             <font>
-                <Font size="28.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="229.0" layoutY="108.0" prefHeight="30.0" prefWidth="202.0" text="Name">
+        <Label layoutX="406.0" layoutY="203.0" prefHeight="30.0" prefWidth="149.0" text="Phone no.">
             <font>
-                <Font size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="225.0" layoutY="196.0" prefHeight="30.0" prefWidth="202.0" text="Phone number">
+        <Label layoutX="409.0" layoutY="261.0" prefHeight="30.0" prefWidth="85.0" text="Email ID">
             <font>
-                <Font size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="225.0" layoutY="256.0" prefHeight="30.0" prefWidth="202.0" text="Email id">
+        <Label layoutX="406.0" layoutY="332.0" prefHeight="34.0" prefWidth="110.0" text="Username">
             <font>
-                <Font size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="225.0" layoutY="312.0" prefHeight="34.0" prefWidth="202.0" text="Username">
+        <Label layoutX="406.0" layoutY="380.0" prefHeight="30.0" prefWidth="110.0" text="Password">
             <font>
-                <Font size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="225.0" layoutY="368.0" prefHeight="30.0" prefWidth="202.0" text="Create Password">
+        <Button layoutX="464.0" layoutY="454.0" mnemonicParsing="false" onAction="#registerdetails" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #79137c;" text="Register" textFill="WHITE">
             <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
-        <Button layoutX="320.0" layoutY="482.0" mnemonicParsing="false" onAction="#registerdetails" prefHeight="34.0" prefWidth="141.0" text="Register">
-            <font>
-                <Font size="28.0" />
+                <Font name="System Bold" size="28.0" />
             </font>
         </Button>
-        <TextField fx:id="fName" layoutX="426.0" layoutY="111.0" promptText="First Name" />
-        <TextField fx:id="lName" layoutX="426.0" layoutY="148.0" promptText="Last name" />
-        <TextField fx:id="num" layoutX="426.0" layoutY="199.0" promptText="Enter your phone number" />
-        <TextField fx:id="email" layoutX="426.0" layoutY="258.0" promptText="Enter your email id" />
-        <TextField fx:id="usernametextfield" layoutX="426.0" layoutY="317.0" promptText="Create a username" />
-        <PasswordField fx:id="passwordtextfield" layoutX="426.0" layoutY="371.0" promptText="Create a password" />
-      <Label fx:id="error" layoutX="363.0" layoutY="431.0" prefHeight="30.0" prefWidth="76.0">
+        <TextField fx:id="fName" layoutX="551.0" layoutY="119.0" promptText="First Name" />
+        <TextField fx:id="lName" layoutX="551.0" layoutY="154.0" promptText="Last name" />
+        <TextField fx:id="num" layoutX="551.0" layoutY="206.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter your phone number" />
+        <TextField fx:id="email" layoutX="555.0" layoutY="264.0" promptText="Enter your email id" />
+        <TextField fx:id="usernametextfield" layoutX="555.0" layoutY="337.0" promptText="Create a username" />
+        <PasswordField fx:id="passwordtextfield" layoutX="555.0" layoutY="383.0" promptText="Create a password" />
+      <Label fx:id="error" layoutX="506.0" layoutY="410.0" prefHeight="30.0" prefWidth="76.0">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <ImageView fitHeight="612.0" fitWidth="327.0" layoutX="32.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic1.jpeg" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
